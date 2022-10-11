@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telran.remindly.test.CreateReminderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-11T19:03:02" hostname="LAPTOP-7JRM91AM" time="25.742">
+  <properties/>
+  <testcase name="addReminderWithRandomSwipeTest" classname="com.telran.remindly.test.CreateReminderTest" time="25.742"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Okt. 11, 2022 9:03:02 NACHM. io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFORMATION: Detected dialect: W3C
+]]></system-err>
+</testsuite>
