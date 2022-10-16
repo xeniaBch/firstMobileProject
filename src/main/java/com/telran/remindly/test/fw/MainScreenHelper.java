@@ -4,6 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.Collection;
 import java.util.List;
 
 public class MainScreenHelper extends HelperBase{
@@ -24,5 +25,9 @@ public class MainScreenHelper extends HelperBase{
     public int getTotalReminders() {
         List<WebElement> imageId = driver.findElements(By.id("thumbnail_image"));
         return imageId.size();
+    }
+
+    public String isTitlePresent() {
+       return getText(By.id("recycle_title"));
     }
 }

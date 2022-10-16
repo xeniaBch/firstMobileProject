@@ -89,4 +89,27 @@ public class HelperBase {
                 .release()
                 .perform();
     }
+
+    public void moveFrom(By by, double from, double to){
+        TouchAction action = new TouchAction(driver);
+        Dimension size = driver.manage().window().getSize();
+        int upPoint = (int) (size.height*from);
+        int downPoint = (int) (size.height*to);
+        WebElement element = driver.findElement(by);
+        int leftX = element.getLocation().getX();
+        int rightX = leftX + element.getSize().getWidth();
+        int middleX = (leftX + rightX)/2;
+        action.longPress(PointOption.point(middleX,upPoint))
+                .moveTo(PointOption.point(middleX, downPoint))
+                .release()
+                .perform();
+    }
+
+    public void pressOnTimer(int x, int y) {
+        TouchAction action = new TouchAction(driver);
+        Dimension size = driver.manage().window().getSize();
+        action.tap(PointOption.point(x, y)).release().perform();
+    }
+
+
 }
